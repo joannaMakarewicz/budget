@@ -1,0 +1,9 @@
+.inputCategory {
+    display: flex;
+}
+
+.inputCategory__select {
+    border:0;
+    border-radius: 6px;
+    outline:none;
+}

@@ -1,16 +1,14 @@
 import "./App.css";
-import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home/Home";
 import Header from "./components/Header/Header";
-import InputArea from "./components/InputArea/InputArea";
-import Summary from "./components/Summary/Summary";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
-    <Header/>
-      <InputArea/>
-      <Summary/>
-      <Footer/>
+     <Header />
+      <Home />
+      <Footer />
     </div>
   );
 }
