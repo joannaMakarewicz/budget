@@ -1,24 +1,22 @@
-.summary {
-    margin:auto;
-    width: 100%;
+.heading {
+margin:auto;
+width: 100%;
 }
 
-.summary__heading {
+.heading__heading {
     color: #132a13;
 }
 
-
 @media screen and (min-width:769px){
-    .summary {
+    .heading {
         width:75%;
     }
     
 }
 
 @media screen and (min-width:1025px){
-    .summary {
+    .heading {
         width:60%;
     }
     
 }
-
