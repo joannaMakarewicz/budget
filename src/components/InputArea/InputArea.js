@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Input from "../InputArea/Input/Input";
 import InputCategory from "../InputArea/InputCategory/InputCategory";
 import Button from "./Button/Button";
-import '../InputArea/InputArea.css';
+import CategoryContext from "../../context/CategoryContext";
+import "../InputArea/InputArea.css";
 
 const InputArea = () => {
   return (
