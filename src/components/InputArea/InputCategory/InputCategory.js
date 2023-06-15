@@ -9,7 +9,7 @@ const InputCategory = () => {
     <div className="inputCategory text-start">
       <label className="d-block text-start"></label>
       <select className="inputCategory__select form-select w-100" aria-label="Select list">
-      <option defaultValue>Open menu</option>
+      <option defaultValue>Open</option>
         <CategoryContext.Consumer>
           {(value) =>
             value.categories.map((category, index) => {
