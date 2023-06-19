@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsPlus } from "react-icons/bs";
-import '../Button/Button.css';
+import "../Button/Button.css";
+import NewInputContext from "../../../context/NewInputContext";
 
 const Button = () => {
+  const newValues = useContext(NewInputContext);
+  const saveInfo = () => {
+    console.log(newValues.input, newValues.chosenCategory);
+  };
   return (
-    <div className='button d-flex justify-content-center align-items-center fs-2'>
-      <BsPlus />
-    </div>
+    <NewInputContext.Consumer>
+      {(newValues) => (
+        <div className="button d-flex justify-content-center align-items-center fs-2">
+          <BsPlus onClick={saveInfo} />
+        </div>
+      )}
+    </NewInputContext.Consumer>
   );
 };
 

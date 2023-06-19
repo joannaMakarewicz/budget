@@ -1,19 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import InputArea from "../../components/InputArea/InputArea";
 import Summary from "../../components/Summary/Summary";
 import Heading from "../../components/Heading/Heading";
-import CategoryContext from "../../context/CategoryContext";
+import NewInputContext from "../../context/NewInputContext";
 import "../Home/Home.css";
+import CategoryContext from "../../context/CategoryContext";
 
 const Home = () => {
 
   const categories= ['travel', 'medical', 'home', 'insurance', 'meals', 'car', 'fuel', 'personal care', 'fitness', 'gifts', 'other'];
+  const [input, setInput]=useState('');
+  const [chosenCategory, setChosenCategory]=useState('Open')
+
   return (
     <main className="home p-2 w-100">
       <Heading />
       <CategoryContext.Provider value={{categories:categories}}>
-        <InputArea />
-        <Summary />
+        <NewInputContext.Provider value={{
+          chosenCategory:chosenCategory,
+          setChosenCategory:setChosenCategory,
+          input:input,
+          setInput:setInput
+          }}>
+          <InputArea />
+          <Summary />
+        </NewInputContext.Provider>
       </CategoryContext.Provider>
     </main>
   );

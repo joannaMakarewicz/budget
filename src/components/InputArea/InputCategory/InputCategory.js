@@ -1,14 +1,21 @@
 import React, { useContext } from "react";
 import "../InputCategory/InputCategory.css";
 import CategoryContext from "../../../context/CategoryContext";
+import NewInputContext from "../../../context/NewInputContext";
 
 const InputCategory = () => {
   const value = useContext(CategoryContext);
-  console.log(value);
+  const newCategory = useContext(NewInputContext)
+  const chosenCategory = (e) => {
+    newCategory.setChosenCategory(e.target.value)
+  }
+
   return (
     <div className="inputCategory text-start">
       <label className="d-block text-start"></label>
-      <select className="inputCategory__select form-select w-100" aria-label="Select list">
+      <NewInputContext.Consumer>
+      {(newCategory)=>
+        <select className="inputCategory__select form-select w-100" aria-label="Select list" onChange={chosenCategory}>
       <option defaultValue>Open</option>
         <CategoryContext.Consumer>
           {(value) =>
@@ -17,7 +24,11 @@ const InputCategory = () => {
             })
           }
         </CategoryContext.Consumer>
+        
       </select>
+      }
+      
+      </NewInputContext.Consumer>
     </div>
   );
 };
