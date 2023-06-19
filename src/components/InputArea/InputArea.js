@@ -9,6 +9,7 @@ const InputArea = () => {
     <form className="inputArea mt-5 mb-5 p-2">
       <Input />
       <InputCategory />
+      <Input />
       <Button />
     </form>
   );
