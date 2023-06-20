@@ -8,9 +8,10 @@ import CategoryContext from "../../context/CategoryContext";
 
 const Home = () => {
 
-  const categories= ['travel', 'medical', 'home', 'insurance', 'meals', 'car', 'fuel', 'personal care', 'fitness', 'gifts', 'other'];
-  const [input, setInput]=useState('');
-  const [chosenCategory, setChosenCategory]=useState('Open')
+  const categories = ['travel', 'medical', 'home', 'insurance', 'meals', 'car', 'fuel', 'personal care', 'fitness', 'gifts', 'other'];
+  const [input, setInput] = useState('');
+  const [chosenCategory, setChosenCategory] = useState('Open')
+  const [price, setPrice] = useState('')
 
   return (
     <main className="home p-2 w-100">
@@ -20,7 +21,9 @@ const Home = () => {
           chosenCategory:chosenCategory,
           setChosenCategory:setChosenCategory,
           input:input,
-          setInput:setInput
+          setInput:setInput,
+          price:price,
+          setPrice:setPrice
           }}>
           <InputArea />
           <Summary />

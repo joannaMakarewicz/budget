@@ -14,10 +14,9 @@ const Summary = () => {
 
   useEffect(() => {
     getExpenses();
-  }, []);
+  }, [expenses]);
 
-  console.log(expenses)
-
+ 
   return (
     <div className='summary mt-4 mb-4'>
       <h2 className='summary__heading text-start p-2'>Summary of your expenses</h2>

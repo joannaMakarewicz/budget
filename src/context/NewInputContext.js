@@ -3,8 +3,10 @@ import React from 'react';
 const NewInputContext = React.createContext({
     chosenCategory: '',
     setChosenCategory: () => {},
-    input:{},
-    setInput: () => {}
+    input:'',
+    setInput: () => {},
+    price: '',
+    setPrice:() => {},
   
 })
 

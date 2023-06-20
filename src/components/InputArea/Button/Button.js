@@ -7,7 +7,6 @@ import axiosInstance  from '../../../services/config';
 const Button = () => {
   const newValues = useContext(NewInputContext);
 
-
   const saveInfo = async () => {
     try {
       const res = await axiosInstance.post("/expenses", {
@@ -16,7 +15,7 @@ const Button = () => {
             fields: {
               name: newValues.input,
               category: newValues.chosenCategory,
-              price:12,
+              price:newValues.price,
             },
           },
         ],
