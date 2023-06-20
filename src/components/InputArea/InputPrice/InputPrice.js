@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "../Input/Input.css";
+import '../InputPrice/InputPrice.css';
 import NewInputContext from "../../../context/NewInputContext";
 
 const InputPrice = () => {
@@ -16,7 +16,7 @@ const InputPrice = () => {
               htmlFor="price"
             ></label>
             <input
-              className="input__input w-100 p-1"
+              className="input__input w-100"
               id="price"
               type="text"
               onChange={newPrice}

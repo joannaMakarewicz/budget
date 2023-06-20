@@ -20,7 +20,7 @@ const InputCategory = () => {
         <CategoryContext.Consumer>
           {(value) =>
             value.categories.map((category, index) => {
-              return <option className="inputCategory__option p-1" key={index} value={category}>{category}</option>;
+              return <option className="inputCategory__option" key={index} value={category}>{category}</option>;
             })
           }
         </CategoryContext.Consumer>

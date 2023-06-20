@@ -7,7 +7,7 @@ const Sum = ({expensesItem}) => {
       <span>{expensesItem.fields.name.toLowerCase()}</span>
       <span>{expensesItem.fields.category}</span>
       <span>{expensesItem.fields.price}$</span>
-      <span></span>
+      <span>{expensesItem.fields.date}</span>
     </div>
   );
 };
