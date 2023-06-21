@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import '../InputPrice/InputPrice.css';
 import NewInputContext from "../../../context/NewInputContext";
 
-const InputPrice = () => {
+const InputPrice = ({priceValue}) => {
     const newPriceState = useContext(NewInputContext);
     const newPrice = (e) => {
       newPriceState.setPrice(e.target.value);
@@ -22,6 +22,7 @@ const InputPrice = () => {
               type="text"
               onChange={newPrice}
               placeholder="price"
+              value={priceValue}
             />
           </div>
         )}

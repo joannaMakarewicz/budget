@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InputArea from "../../components/InputArea/InputArea";
 import Summary from "../../components/Summary/Summary";
 import Heading from "../../components/Heading/Heading";
@@ -10,8 +10,10 @@ const Home = () => {
 
   const categories = ['travel', 'medical', 'home', 'insurance', 'meals', 'car', 'fuel', 'personal care', 'fitness', 'gifts', 'other'];
   const [input, setInput] = useState('');
-  const [chosenCategory, setChosenCategory] = useState('Open')
-  const [price, setPrice] = useState('')
+  const [chosenCategory, setChosenCategory] = useState('Open');
+  const [price, setPrice] = useState('');
+
+
 
   return (
     <main className="home p-2 w-100">
