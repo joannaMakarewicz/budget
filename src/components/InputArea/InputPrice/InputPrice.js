@@ -7,6 +7,7 @@ const InputPrice = () => {
     const newPrice = (e) => {
       newPriceState.setPrice(e.target.value);
     };
+
     return (
       <NewInputContext.Consumer>
         {(newPriceState) => (
@@ -20,6 +21,7 @@ const InputPrice = () => {
               id="price"
               type="text"
               onChange={newPrice}
+              placeholder="price"
             />
           </div>
         )}

@@ -2,5 +2,5 @@
     background-color: #edf2fb;
     border-radius: 6px;
     display:grid;
-    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
 }

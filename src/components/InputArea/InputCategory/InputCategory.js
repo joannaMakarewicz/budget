@@ -16,7 +16,7 @@ const InputCategory = () => {
       <NewInputContext.Consumer>
       {(newCategory)=>
         <select className="inputCategory__select form-select w-100" aria-label="Select list" onChange={chosenCategory}>
-      <option defaultValue>Open</option>
+      <option defaultValue></option>
         <CategoryContext.Consumer>
           {(value) =>
             value.categories.map((category, index) => {

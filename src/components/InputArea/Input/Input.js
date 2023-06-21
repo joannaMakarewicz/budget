@@ -16,10 +16,11 @@ const Input = () => {
             htmlFor="input"
           ></label>
           <input
-            className="input__input w-100 p-1"
+            className="input__input w-100"
             id="input"
             type="text"
             onChange={newInput}
+            placeholder="add expenses"
           />
         </div>
       )}
