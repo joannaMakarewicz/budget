@@ -10,8 +10,10 @@ import InputPrice from "./InputPrice/InputPrice";
 const InputArea = () => {
 
   const newValues = useContext(NewInputContext);
-  const [inputValue, setInputValue] = useState();
-  const [priceValue, setPriceValue] = useState()
+  // const [inputValue, setInputValue] = useState();
+  // const [priceValue, setPriceValue] = useState();
+
+
 
   const date = new Date();
   let year = date.getFullYear();
@@ -38,18 +40,18 @@ const InputArea = () => {
           },
         ],
       });
-      console.log("poszło");
-      setInputValue('');
-      setPriceValue('');
+      newValues.setInput('');
+      newValues.setPrice('');
     } catch (ex) {
       console.log(ex.response);
     }
   };
+
   return (
     <form className="inputArea mt-5 mb-5 p-2">
-      <Input inputValue={inputValue} />
+      <Input />
       <InputCategory />
-      <InputPrice saveInfo={() => saveInfo} priceValue={priceValue}/>
+      <InputPrice saveInfo={() => saveInfo}/>
       <Button saveInfo={() => saveInfo}/>
     </form>
   );

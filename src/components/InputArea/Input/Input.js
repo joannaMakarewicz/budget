@@ -2,12 +2,14 @@ import React, { useContext, useState } from "react";
 import "../Input/Input.css";
 import NewInputContext from "../../../context/NewInputContext";
 
-const Input = ({inputValue}) => {
+const Input = () => {
   const newInputState = useContext(NewInputContext);
  
   const newInput = (e) => {
     newInputState.setInput(e.target.value);
   };
+
+
   return (
     <NewInputContext.Consumer>
       {(newInputState) => (
@@ -22,7 +24,7 @@ const Input = ({inputValue}) => {
             type="text"
             onChange={newInput}
             placeholder="add expenses"
-            value={inputValue}
+            value={newInputState.input}
           />
         </div>
       )}
