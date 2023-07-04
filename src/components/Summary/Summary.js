@@ -7,7 +7,7 @@ const Summary = () => {
   const [expenses, setExpenses] = useState([])
 
   const getExpenses = async () => {
-    await axiosInstance.get("/expenses?sort%5B0%5D%5Bfield%5D=date").then((response) => {
+    await axiosInstance.get("/expenses?sort%5B0%5D%5Bfield%5D=date&sort%5B0%5D%5Bdirection%5D=desc").then((response) => {
       setExpenses(response.data.records);
     });
   };

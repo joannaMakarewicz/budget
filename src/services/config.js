@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
   baseURL: BASE_URL,
   headers: {
     Authorization: `Bearer ${REACT_APP_API_KEY}`,
-  },
+  }
 });
 
 export default axiosInstance;
